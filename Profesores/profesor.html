@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Profesores</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div class="form-container">
+  <h2>Registro de Nuevos Profesores</h2>
+  <form id="form-profesores">
+    <div class="form-group">
+      <label for="nombre">Nombres:</label>
+      <input type="text" id="nombre" name="nombres" required>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellidos:</label>
+      <input type="text" id="apellido" name="apellido" required>
+    </div>
+    <div class="form-group">
+      <label for="materia">Materia:</label>
+      <input type="text" id="materia" name="materia" required>
+    </div>
+    <div class="form-group">
+      <label for="curso">Curso Asignado:</label>
+      <input type="text" id="curso" name="curso" required>
+    </div>
+    <div class="form-group">
+      <label for="grupo">Grupo del Curso:</label>
+      <input type="text" id="grupo" name="grupo" required>
+    </div>
+    <div class="form-group">
+      <label for="jornada">Jornada:</label>
+      <select id="jornada" name="jornada" required>
+        <option value="">Seleccione jornada</option>
+        <option>Mañana</option>
+        <option>Tarde</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="tipo">Tipo de Profesor:</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Seleccione tipo</option>
+        <option>Estable</option>
+        <option>Reemplazo</option>
+      </select>
+    </div>
+    <button type="submit">Registrar Profesor</button>
+</form>
+</div>
+
+<div class="table-container">
+  <h2>Listado de Profesores</h2>
+
+   <div class="buscar-container">
+    <input type="text" id="buscar" placeholder="Buscar Profesor..." oninput="buscarProfesores()">
+    <button class="Btn-buscar" onclick="buscarProfesores()"> <span>Buscar</span>
+      <svg class="svg" viewBox="0 0 512 512">
+        <path d="M505 442.7L405.3 343c28.4-35.3 45.7-80 45.7-128C451 96.5 354.5 0 232.5 0S14 96.5 14 215.5 110.5 431 232.5 431c48 0 92.7-17.3 128-45.7L442.7 505c4.5 4.5 10.6 7 17 7s12.5-2.5 17-7c9.4-9.4 9.4-24.6 0-33.9zM232.5 383C136.6 383 59 305.4 59 215.5S136.6 48 232.5 48 406 125.6 406 215.5 328.4 383 232.5 383z"/>
+      </svg>
+    </button>
+    
+  </div>
+ 
+
+  <table id="tabla-profesores">
+    <thead>
+      <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+        <th>Materia</th>
+        <th>Curso Asignado</th>
+        <th>Grupo</th>
+        <th>Jornada</th>
+        <th>Tipo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<footer class="footer">
+  © 2025 Todos los derechos reservados.
+</footer>
+
+<script src="profesor.js"></script>
+
+</body>
+</html>
